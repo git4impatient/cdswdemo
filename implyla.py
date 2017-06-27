@@ -1,7 +1,8 @@
 # connect to impala and run a simple query
 # plot result set
-# In command shell git clone https://github.com/cloudera/thrift_
-sasl
+# !git clone https://github.com/cloudera/thrift_sasl
+#!pip install -e thrift_sasl
+#!pip install sasl
 # python setup.py build
 # python setup.py install
 #!pip install sasl
