@@ -7,9 +7,16 @@ from pyspark.sql import *
 # create spark sql session
 myspark = SparkSession\
     .builder\
-    .config("spark.some.config.option", "some-value") \
-    .appName("ParquetInputFormat")\
+    .config("spark.executor.instances", 3 ) \
+    .config("spark.executor.memory", "5g") \
+    .config("spark.executor.cores", 2) \
+    .config("spark.scheduler.listenerbus.eventqueue.size", 10000) \
+    .config("spark.sql.parquet.compression.codec", "snappy") \
+    .appName("Sample_07_kmeans") \
     .getOrCreate()
+
+
+
 sc = myspark.sparkContext
 
 import time
