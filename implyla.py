@@ -1,14 +1,15 @@
 # connect to impala and run a simple query
 # plot result set
-# !git clone https://github.com/cloudera/thrift_sasl
-#!pip install -e thrift_sasl
-#!pip install sasl
-# python setup.py build
-# python setup.py install
-#!pip install sasl
-#!pip install impyla
-#!pip install  thrift
-#!pip show thrift
+! git clone https://github.com/cloudera/thrift_sasl
+!python ~/thrift_sasl/setup.py build
+!pip uninstall  thrift_sasl/
+!pip install -e thrift_sasl/
+!pip install sasl
+!pip install impyla
+!pip install  thrift
+!pip show thrift
+
+#!pip install thrift==0.9.3
 
 from impala.dbapi import connect
 conn = connect(host='10.142.0.2', port=21050)
