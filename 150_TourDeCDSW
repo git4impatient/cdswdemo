@@ -1,0 +1,13 @@
+If you can read this you already created a project
+Please take a quick look at 
+ Kerberos credentials entry
+ LDAP settings screen
+ The Dashboard meters showing resource utilization
+ Left panel: projects, jobs, sessions, settings, admin
+Example 1: simple R hello world
+ Open the file
+ Open workbench
+ Start R session
+ Publish
+ Check dashboard for utilization
+Example 2, 3 run per above
