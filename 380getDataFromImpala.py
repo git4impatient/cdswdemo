@@ -10,7 +10,7 @@
 !pip install thrift==0.9.3
 !pip install impyla
 !pip show thrift
-# some strange overwriting, but this works...
+# some strange overwriting, will be fixed with thrift at 0.10 shortly
 !git clone https://github.com/cloudera/impyla.git
 !pip install -e impyla/
 !pip uninstall -y impyla
