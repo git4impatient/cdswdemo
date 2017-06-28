@@ -1,4 +1,4 @@
-thisIsAString <- "hello from R in cdsw"
+thisIsAString <- "Demonstrate how to install packages and use libraries in R"
 print ( thisIsAString )
 install.packages("ggplot2")
 library ( ggplot2)
