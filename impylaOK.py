@@ -1,17 +1,22 @@
-                                               
-!pip uninstall -y sasl
-!pip uninstall -y impyla
-!pip uninstall  -y thrift
-!pip uninstall -y thrift_sasl/
+# reset stuff                                               
+#!pip uninstall -y sasl
+#!pip uninstall -y impyla
+#!pip uninstall  -y thrift
+#!pip uninstall -y thrift_sasl/
+
+# set up packages we need
+!git clone https://github.com/cloudera/thrift_sasl
 !pip install -e thrift_sasl/
 !pip install thrift==0.9.3
 !pip install impyla
 !pip show thrift
+# some strange overwriting, but this works...
 !git clone https://github.com/cloudera/impyla.git
 !pip install -e impyla/
 !pip uninstall -y impyla
 !pip install impyla
 
+# here is the SQL you have been waiting for
 from impala.dbapi import connect
 conn = connect(host='10.142.0.2', port=21050)
 cursor = conn.cursor()
