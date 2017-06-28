@@ -1,10 +1,3 @@
-
-
-    Filespi.py
-
-    Download
-    Open In Workbench
-
 # # Estimating $\pi$
 #
 # This is the simplest PySpark example. It shows how to estimate $\pi$ in parallel
