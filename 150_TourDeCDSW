@@ -7,6 +7,8 @@ Please take a quick look at
 Example 1: simple R hello world
  Open the file
  Open workbench
+ Select Session type: R, python, scala
+ Select Session size: cpu and ram resources
  Start R session
  Publish
  Check dashboard for utilization
