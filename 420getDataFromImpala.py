@@ -19,6 +19,7 @@
 # here is the SQL you have been waiting for
 from impala.dbapi import connect
 conn = connect(host='10.142.0.2', port=21050)
+#   172.28.210.3
 cursor = conn.cursor()
 cursor.execute('SELECT * FROM sample_07p LIMIT 5') 
 
