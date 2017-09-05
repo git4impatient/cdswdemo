@@ -1,21 +1,8 @@
-# example from the python project template
-# Setup
-# -----
 
-from pandas_datareader import data as web
+
 import matplotlib.pyplot as plt
 
-# Basic Data Manipulation
-# -----------------------
-#
-# Read data from Yahoo stock API using [pandas](http://bit.ly/HHNQqn).
 
-start = datetime.datetime(2014, 1, 1)
-end = datetime.datetime(2014, 9, 1)
-stocks = web.DataReader(['GOOG','AAPL','TSLA'], 'yahoo', start, end)
-stocks['Open']['TSLA'].plot(title="The Rise of Tesla")
-
-# Using IPython's Rich Display System
 # -----------------------------------
 #
 # IPython has a [rich display system](bit.ly/HHPOac) for 
@@ -30,6 +17,8 @@ def gmaps(query):
   display(IFrame(url, '700px', '450px'))
 
 gmaps("Golden Gate Bridge")
+
+gmaps("Nashville,TN")
 
 # Worker Engines
 # -----------------
