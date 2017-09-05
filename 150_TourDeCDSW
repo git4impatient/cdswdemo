@@ -4,14 +4,21 @@ Please take a quick look at
  LDAP settings screen
  The Dashboard meters showing resource utilization
  Left panel: projects, jobs, sessions, settings, admin
-Example 1: simple R hello world
+ 
+You are now ready to run different examples. It is easiset to run
+in sequential order.  
+The first example: 200_Basic_HelloR.r  
+This is a simple hello world in R
  Open the file
  Open workbench
- Select Session type: R, python, scala
+ Select Session type: R, python, scala... for an R file you'll want an R environment
  Select Session size: cpu and ram resources
  Start R session
- Publish
+ Publish your session with the link in the upper right hand corner.  The session
+  publication is a great teaming feature
  Check dashboard for utilization
-Example 2, 3 run per above
-When in pyspark - check out CM 
+
+Run more of the examples... when you run the python examples you'll need to create a 
+ python session
+When in pyspark - check out CM, you can see your session running
 Jobs - schedule when to run workload
