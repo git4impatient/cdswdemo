@@ -1,4 +1,8 @@
-
+#
+#
+# please use a python 2 execution environment for the labs
+#
+#
 
 import matplotlib.pyplot as plt
 
