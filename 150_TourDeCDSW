@@ -5,6 +5,10 @@ Please take a quick look at
  The Dashboard meters showing resource utilization
  Left panel: projects, jobs, sessions, settings, admin
  
+You can refresh the files in this project by opening the "terminal access" and doing:
+git pull    
+at the command line
+ 
 You are now ready to run different examples. It is easiset to run
 in sequential order.  
 The first example: 200_Basic_HelloR.r  
