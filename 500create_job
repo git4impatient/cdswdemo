@@ -1,1 +1,13 @@
 # demonstrate job creation
+# 
+# go to the project page
+# click on jobs
+# create job
+# schedule for every 1 minute
+# 
+# create a dependent job
+# 
+# let it run for about 4 minutes so you see multiple outputs in the job graph
+# 
+# stop the job
+# 
