@@ -1,3 +1,8 @@
+#
+# once you install a package, it will be there the next time you work in the project
+# even though you stop the sessoin, a new session will still have the packages ready and waiting for you
+#
+
 thisIsAString <- "Demonstrate how to install packages and use libraries in R"
 print ( thisIsAString )
 install.packages("ggplot2")
