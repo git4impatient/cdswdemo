@@ -1,7 +1,7 @@
 If you can read this you already created a project
 Please take a quick look at 
  Kerberos credentials entry
- LDAP settings screen
+ LDAP settings screen - you can only see this if you have admin rights... please don't change anything!
  The Dashboard meters showing resource utilization
  Left panel: projects, jobs, sessions, settings, admin
  
