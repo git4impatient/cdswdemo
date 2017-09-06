@@ -26,3 +26,6 @@ Run more of the examples... when you run the python examples you'll need to crea
  python session
 When in pyspark - check out CM, you can see your session running
 Jobs - schedule when to run workload
+
+To see what your peers are working on
+http://yourCDSW_Server/explore
