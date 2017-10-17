@@ -1,6 +1,9 @@
 #
 # copyright 2017 Martin Lurie - all rights reserved - for non-commercial use
 #
+# see multi-car directory for data files and scripts
+#
+#
 from __future__ import print_function
 !echo $PYTHON_PATH
 import os, sys
