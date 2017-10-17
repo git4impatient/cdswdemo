@@ -1,0 +1,12 @@
+drop table if exists telematicsodb;
+CREATE TABLE telematicsobd
+(
+  vin BIGINT,
+  longitude float,
+  latitude float,
+  everythingelse string,
+  PRIMARY KEY(vin)
+)
+PARTITION BY HASH PARTITIONS 16
+STORED AS KUDU TBLPROPERTIES( 'kudu.master_addresses' = 'gromit:7051');
+select * from telematicsobd;

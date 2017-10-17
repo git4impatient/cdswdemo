@@ -1,0 +1,14 @@
+# (c) 2014 Copyright Martin Lurie
+# sample code - not supported
+#
+#./gokafkamsg.sh &
+# cat nysetrades210130404 | ./genKafkamsg.py&
+#cat /home/marty/edrive/bigData/movielens/ml-10M100K/ratings5k.dat | ./genKafkamsg.py&
+hadoop fs -rm -r telematicsKafka
+hadoop fs -mkdir telematicsKafka
+firefox 'http://gromit.lurie.biz:50075/browseDirectory.jsp?dir=%2Fuser%2Fmarty%2FtelematicsKafka&namenodeInfoPort=50070&nnaddr=172.16.145.1:8020' &
+flume-ng agent -n flume1 -f telematicsKafka.properties 
+
+
+exit
+

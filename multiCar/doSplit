@@ -1,0 +1,7 @@
+# copyright 2017 Martin Lurie
+# 59 cars for i in ../*.csv; do split -l 100 $i  --additional-suffix $(basename $i) ; done
+# 30 cars 
+for i in ../*.csv
+ do 
+split -l 200 $i  --additional-suffix $(basename $i) 
+ done

@@ -1,0 +1,16 @@
+[
+	"/timestamp",
+	"/vin",
+	"/miles",
+	"/xAccel",
+	"/yAccel",
+	"/zAccel",
+	"/speed",
+	"/brakesOn",
+	"/signalOn",
+	"/laneDeparted",
+	"/collisionDetected",
+	"/hazardDetected",
+	"/latitude",
+	"/longitude"
+]

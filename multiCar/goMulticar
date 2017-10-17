@@ -1,0 +1,20 @@
+# copyright 2017 Martin Lurie  for non-commercial use
+#cat  xbetrackLog-2017-May-10_08-00-49.csv | ./genKafkamsg.py
+echo turn on streamsets http://gromit.lurie.biz:18630/collector/pipeline/7bf5b988-9a1d-4acd-86b4-6b542db128f8
+#read foo
+echo run ddl
+echo 'cd  /home/marty/edrive/src/telematics/multiCar ; impala-shell -f  telematics.ddl  
+#read foo
+echo clear hdfs directory of prior data 
+echo 'hadoop fs -rm -r /tmp/out; hadoop fs -mkdir /tmp/out; hadoop fs -chmod 777 /tmp/out
+echo start spark-streaming client to read messages and alert for high speed
+echo '/home/marty/edrive/src/telematics/multiCar/sparkspeeding.py'
+impala-shell <<eoj
+delete from telematicsobd;
+eoj
+
+for i in *.csv
+do
+echo $i
+cat $i  | ./genKafkamsg.py &
+done
