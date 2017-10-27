@@ -1,0 +1,6 @@
+DO NOT PUT YOUR DATA FILES IN YOUR CDSW PROJECT UNLESS YOU HAVE TINY DATA
+Big data belongs in your ClouderaHadoop cluster
+
+The data lives here since it is small and you need it to work the examples
+
+ps: copyright (c) 2017 Martin Lurie
