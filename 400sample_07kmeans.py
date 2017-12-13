@@ -69,8 +69,11 @@ from pyspark.ml.clustering import KMeans
 # try 10 different centers 
 #
 #
-#
-kmeans = KMeans().setK(15).setSeed(1)
+#  we will start with 10 cluster centers 
+#  run the model and then come back here, change the 10 to 15
+# highlight from this line to the bottom and select "run selected lines"
+# it will then see the cluster in the upper right hand corner of the scatter plot
+kmeans = KMeans().setK(10).setSeed(1)
 # run the model
 model = kmeans.fit(output)
 
