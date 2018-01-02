@@ -42,3 +42,11 @@ def plotit():
 plotit()
 # leave next line to generate an error, illustrate typing at commnad prompt
 print "done"
+
+#1  export PYTHON_HOME=/opt/cloudera/parcels/Anaconda/
+ #   2  export PATH=/opt/cloudera/parcels/Anaconda/bin/:$PATH
+  #  3  conda install -c conda-forge impyla
+   # 4  export PATH=/opt/cloudera/parcels/Anaconda/bin/:$PATH
+ #   5  export PYTHON_HOME=/opt/cloudera/parcels/Anaconda/
+ #   6  conda install   thrift==0.9.3
+
