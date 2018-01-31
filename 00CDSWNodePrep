@@ -1,0 +1,19 @@
+#cut and paste
+sudo su -
+sed -i 's/=enforcing/=disabled/' /etc/selinux/config
+cat /etc/selinux/config
+systemctl stop firewalld
+systemctl disable firewalld
+# For the change in SELinux to take effect you have to reboot the server
+You9:09 AM
+sysctl -w net.ipv6.conf.all.disable_ipv6=0
+sysctl -w net.ipv6.conf.default.disable_ipv6=0
+echo "net.ipv6.conf.all.disable_ipv6 = 0" >> /etc/sysctl.conf
+echo "net.ipv6.conf.default.disable_ipv6 = 0" >> /etc/sysctl.conf
+echo "fs.file-max = 1000000" >> /etc/sysctl.conf
+sysctl -p
+You9:11 AM
+# cut and paste
+sudo su -
+echo '* soft nofile 1000000' >> /etc/security/limits.conf
+echo '* hard nofile 1000000' >> /etc/security/limits.conf
