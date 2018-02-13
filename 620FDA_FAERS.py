@@ -41,7 +41,7 @@ demo.show(5)
 # create a table name to use for sparkSQL queries
 demo.createOrReplaceTempView("faersdemo")
 # run a query
-faersagewt=myspark.sql('select age, wt*2.2,sex from faersdemo limit 1000')
+faersagewt=myspark.sql('select age, wt*2.2,sex from faersdemo where age between 0 and 100 and wt between 1 and 500 limit 1000')
 
 # now create pretty graph
 #%matplotlib inline
@@ -60,7 +60,7 @@ plotit(400)
 import seaborn as sns
 import pandas
 
-outcome= myspark.sql('select casecount, mywt, myage, csex, label from logisticoutcomep')
+outcome= myspark.sql('select casecount, mywt, myage, csex, label from logisticoutcomep where mywt between 0 and 500 and myage between 0 and 100')
 outcome.show(3)
 # seaborn wants a pandas dataframe, not a spark dataframe
 # so convert
