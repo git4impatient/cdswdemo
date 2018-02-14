@@ -40,8 +40,10 @@ demo.show(5)
 
 # create a table name to use for sparkSQL queries
 #demo.createOrReplaceTempView("faersdemo")
+
+
 # run a query
-faersagewt=myspark.sql('select mywt, myage from logisticoutcomep where mywt between 0 and 500 and myage between 0 and 100')
+faersagewt=myspark.sql('select mywt, myage, cast (csex/3 as string) from logisticoutcomep where mywt between 0 and 500 and myage between 0 and 100')
 
 # now create pretty graph
 %matplotlib inline
@@ -51,10 +53,11 @@ import matplotlib.pyplot as plt
 # varying number of points
 def plotit(numpts):
  for row in faersagewt.take(numpts):
-    plt.scatter(row[1],row[0], color=['blue'])
+    plt.scatter(row[1],row[0], color=row[2])
  plt.show()
       
 plotit(400)
+
 
 # pairplot to see what we have...
 import seaborn as sns
