@@ -33,6 +33,7 @@ results = cursor.fetchall()
 print (results)
 cursor.execute('select salary, total_emp from sample_07p where total_emp < 400000 limit 500')
 foo=300000*-0.0144608312694
+import matplotlib.pyplot as plt
 def plotit():
  for row in cursor:
     #print row[0] , row[1]
