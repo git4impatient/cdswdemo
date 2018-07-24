@@ -50,4 +50,44 @@ print "done"
    # 4  export PATH=/opt/cloudera/parcels/Anaconda/bin/:$PATH
  #   5  export PYTHON_HOME=/opt/cloudera/parcels/Anaconda/
  #   6  conda install   thrift==0.9.3
+ 
+ 
+ # and now pandas and spark dataframes....
+ 
+ import os, sys
+#import path
+from pyspark.sql import *
+
+# create spark sql session
+myspark = SparkSession\
+    .builder\
+    .config("spark.executor.instances", 3 ) \
+    .config("spark.executor.memory", "5g") \
+    .config("spark.executor.cores", 2) \
+    .config("spark.dynamicAllocation.maxExecutors", 10) \
+    .config("spark.scheduler.listenerbus.eventqueue.size", 10000) \
+    .config("spark.sql.parquet.compression.codec", "snappy") \
+    .appName("Sample_07_kmeans") \
+    .getOrCreate()
+
+
+
+sc = myspark.sparkContext
+
+cursor.execute('select * from sample_07p limit 10') 
+from impala.util import as_pandas
+df = as_pandas(cursor)
+print df
+
+type(df)
+
+
+from pyspark.sql import SQLContext
+print sc
+#df = pd.read_csv("test.csv")
+print type(df)
+print df
+sqlCtx = SQLContext(sc)
+sqlCtx.createDataFrame(df).show()
+
 
