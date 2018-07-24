@@ -53,6 +53,14 @@ print "done"
  
  
  # and now pandas and spark dataframes....
+ cursor.execute('select * from sample_07p limit 10') 
+from impala.util import as_pandas
+df = as_pandas(cursor)
+print df
+
+type(df)
+
+# convert to spark dataframe
  
  import os, sys
 #import path
@@ -74,12 +82,6 @@ myspark = SparkSession\
 
 sc = myspark.sparkContext
 
-cursor.execute('select * from sample_07p limit 10') 
-from impala.util import as_pandas
-df = as_pandas(cursor)
-print df
-
-type(df)
 
 
 from pyspark.sql import SQLContext
