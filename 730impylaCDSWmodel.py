@@ -2,6 +2,15 @@
 # or v1.4.0 will throw error
 # failed to initiate the model build
 #
+# impyla install, based on some trial and error
+# !git clone https://github.com/cloudera/impyla.git
+# !pip install impyla   <- this fails
+# !pip install argparse
+# !pip install futures==3.0.3
+# !pip uninstall -y impyla
+# !pip install impyla   <- and now this works
+#
+# 
 # here is the SQL you have been waiting for
 from impala.dbapi import connect
 conn = connect(host='ip-10-0-0-103.ec2.internal', port=21050)
