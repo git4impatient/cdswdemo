@@ -41,7 +41,7 @@ dfpfc.createOrReplaceTempView("census07")
 fcout=myspark.sql('select * from census07 where salary > 100000')
 fcout.show(5)
 # create a dataframe with valid rows
-mydf=myspark.sql('select code as txtlabel, salary, total_emp from sample_07 where total_emp > 0 and total_emp< 1000000 and salary >0 and salary<500000' )
+mydf=myspark.sql('select code as txtlabel, salary, total_emp from census07 where total_emp > 0 and total_emp< 1000000 and salary >0 and salary<500000' )
 mydf.show(5)
 
 # need to convert from text field to numeric
