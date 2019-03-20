@@ -1,0 +1,13 @@
+Browse to   http://yourinstance/explore 
+
+Work with a lab partner on the same system and toggle the 
+public private settings on your project, it will appear and disapear
+from the explore listing
+
+Invite a colaborator user to a private project
+
+Fork a working project from another user.  Make sure it is working :-)
+Notice it will work under your id with no additional pip-installs etc.
+All the bits needed to make the project work came with the fork.  
+Note: user permissions for external resources are still controlled by the 
+userid
