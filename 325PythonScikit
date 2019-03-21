@@ -1,6 +1,8 @@
 # good example from
 #http://scikit-learn.org/stable/auto_examples/plot_cv_predict.html#sphx-glr-auto-examples-plot-cv-predict-py
 
+# run this once
+# !pip install sklearn
 from sklearn import datasets
 from sklearn.model_selection import cross_val_predict
 from sklearn import linear_model
