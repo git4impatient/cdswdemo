@@ -29,8 +29,10 @@ print ( myspark )
 myspark.sql("SET spark.sql.parquet.binaryAsString=true")
 
 # read in the data file from HDFS
-#dfpfc = myspark.read.parquet ( "/user/hive/warehouse/sample_07p")
-dfpfc = myspark.read.parquet ( "s3a://impalas3a/sample_07_s3a_parquet")
+dfpfc = myspark.read.parquet ( "/user/hive/warehouse/sample_07p")
+# you can also read directly from an s3 bucket, you would of course need the s3 IAM key 
+# and permission to read the bucket
+#dfpfc = myspark.read.parquet ( "s3a://impalas3a/sample_07_s3a_parquet")
 # print number of rows and type of object
 print ( dfpfc.count() )
 print  ( dfpfc )
