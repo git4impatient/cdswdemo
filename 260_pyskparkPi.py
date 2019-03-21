@@ -9,6 +9,8 @@ from random import random
 from operator import add
 from pyspark.sql import SparkSession
 
+# if java is not in the default location you'll need to specify
+# spark.executorEnv.JAVA_HOME=/usr/java/yadayada
 spark = SparkSession\
     .builder\
     .appName("PythonPi")\
