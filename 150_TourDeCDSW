@@ -2,12 +2,12 @@ If you can read this you already created a project
 Please take a quick look at 
  Kerberos credentials entry
  LDAP settings screen - you can only see this if you have admin rights... please don't change anything!
- The Dashboard meters showing resource utilization
+ The Dashboard meters showing resource utilization, if your hardware has GPUs you'll get a GPU resource meter
  Left panel: projects, jobs, sessions, settings, admin
  
 You can refresh the files in this project by opening the "terminal access" and doing:
 git pull    
-at the command line
+at the command line. This is also how you can access a private GitHub
  
 You are now ready to run different examples. It is easiset to run
 in sequential order.  
@@ -29,3 +29,8 @@ Jobs - schedule when to run workload
 
 To see what your peers are working on
 http://yourCDSW_Server/explore
+
+Very powerful model deployment - create a "python template" project and then 
+follow the instructions here to deploy a model you can call from a REST endpoint
+https://www.cloudera.com/documentation/data-science-workbench/latest/topics/cdsw_models_examples.html
+
