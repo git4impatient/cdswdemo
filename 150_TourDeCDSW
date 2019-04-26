@@ -29,6 +29,8 @@ Jobs - schedule when to run workload
 
 To see what your peers are working on
 http://yourCDSW_Server/explore
+Fork a project!  Notice all the libraries are in place and the code runs.  You will 
+need adequate HDFS permissions to access the data for the project
 
 Very powerful model deployment - create a "python template" project and then 
 follow the instructions here to deploy a model you can call from a REST endpoint
