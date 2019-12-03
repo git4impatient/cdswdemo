@@ -7,6 +7,7 @@ from pyspark.sql import *
 # need a data table
 # from hue samples
 #  create table sample_07p stored as parquet as select * from sample_07;
+# in CDP make it an external table that you can read
 # create spark sql session
 myspark = SparkSession\
     .builder\
