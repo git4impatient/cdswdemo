@@ -4,6 +4,9 @@ import os, sys
 #import path
 from pyspark.sql import *
 
+# need a data table
+# from hue samples
+#  create table sample_07p stored as parquet as select * from sample_07;
 # create spark sql session
 myspark = SparkSession\
     .builder\
@@ -29,6 +32,7 @@ print ( myspark )
 myspark.sql("SET spark.sql.parquet.binaryAsString=true")
 
 # read in the data file from HDFS
+# location of hive warehouse changes in CDP 
 dfpfc = myspark.read.parquet ( "/user/hive/warehouse/sample_07p")
 # you can also read directly from an s3 bucket, you would of course need the s3 IAM key 
 # and permission to read the bucket
