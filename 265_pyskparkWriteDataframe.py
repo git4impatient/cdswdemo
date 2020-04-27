@@ -48,7 +48,7 @@ bar2.take(50)
 
 # in ranger added marty with full access to default database
 spark.sql("CREATE TABLE IF NOT EXISTS pysparktab (key INT, value STRING) USING hive")
-spark.sql("insert into src values (22,'created in MLx')")
+spark.sql("insert into pysparktab values (22,'created in MLx')")
     
 # DataFrames can be saved as Parquet files, maintaining the schema information.
 !klist
