@@ -59,6 +59,8 @@ foo.take(50)
 # !hadoop fs -rm -r s3a://cdp-sandbox-default-se/datalake/warehouse/tablespace/external/hive/pysparktab
 spark.sql("CREATE TABLE IF NOT EXISTS pysparktab (key INT, value STRING) USING hive")
 spark.sql("insert into pysparktab values (22,'created in MLx')")
+spark.sql("insert into pysparktab values (22,concat ( 'created in pyspark mlx', current_timestamp() ) )")
+
     
 # DataFrames can be saved as Parquet files, maintaining the schema information.
 !klist
