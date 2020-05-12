@@ -56,6 +56,7 @@ foo.take(50)
 #bar2.take(50)
 
 # in ranger added marty with full access to default database
+# !hadoop fs -rm -r s3a://cdp-sandbox-default-se/datalake/warehouse/tablespace/external/hive/pysparktab
 spark.sql("CREATE TABLE IF NOT EXISTS pysparktab (key INT, value STRING) USING hive")
 spark.sql("insert into pysparktab values (22,'created in MLx')")
     
@@ -69,6 +70,7 @@ spark.sql("insert into pysparktab values (22,'created in MLx')")
 df = spark.createDataFrame([("10", ), ("11", ), ("13",  )], ["age"])
 df.show()
 
+!hadoop fs -rm -r s3a://cdp-sandbox-default-se/datalake/martyparquet
 df.write.parquet("s3a://cdp-sandbox-default-se/datalake/martyparquet")
 # this is where a create table landed hdfs://se-sandbox-dl-12apr-master0.se-sandb.a465-9q4k.cloudera.site:8020/tmp/age.parquet")
                  # file:/home/cdsw/age.parquet")
