@@ -49,11 +49,11 @@ foo=spark.sql("show tables")
 foo.take(50)
 # ranger is cool with the next statement, SDX not so much...
 # need the right mapping
-bar=spark.sql("show create table sampletxt")
-bar.take(50)
+#bar=spark.sql("show create table sampletxt")
+#bar.take(50)
 
-bar2=spark.sql("select * from sampletxt")
-bar2.take(50)
+#bar2=spark.sql("select * from sampletxt")
+#bar2.take(50)
 
 # in ranger added marty with full access to default database
 spark.sql("CREATE TABLE IF NOT EXISTS pysparktab (key INT, value STRING) USING hive")
@@ -75,5 +75,5 @@ df.write.parquet("s3a://cdp-sandbox-default-se/datalake/martyparquet")
    
 !hadoop fs -ls s3a://cdp-sandbox-default-se/datalake/
    
-spark.stop()
+#spark.stop()
 
