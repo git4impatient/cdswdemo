@@ -1,6 +1,13 @@
 # # WriteDF2Parquet
 #
 # This is the simplest PySpark example.create a dataframe and write it
+#
+# for a new environment you'll need to
+# add the userid to the groups that have permission to access ML
+# update the id_broker mappings so you have write access to the S3 buckets
+# update id_broker to allow ranger access
+# update Ranger permissions so you can write to the default Hive database
+# 
 
 from __future__ import print_function
 import sys
