@@ -5,8 +5,10 @@
 # for a new environment you'll need to
 # add the userid to the groups that have permission to access ML
 # update the id_broker mappings so you have write access to the S3 buckets
-# update id_broker to allow ranger access
-# update Ranger permissions so you can write to the default Hive database
+# XX do not do this - error when creating two roles for one user: update id_broker to allow ranger access
+# sync to freeipa to fix HTTP ERROR 403 forbidden
+# update Ranger policy so you can write to the default Hive database, commonly policy #14 
+# update Ranger policy so you can use URL commonly policy #13 
 # 
 
 from __future__ import print_function
