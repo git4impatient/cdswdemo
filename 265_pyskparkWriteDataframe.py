@@ -60,6 +60,7 @@ foo.take(50)
 spark.sql("CREATE TABLE IF NOT EXISTS pysparktab (key INT, value STRING) USING hive")
 spark.sql("insert into pysparktab values (22,'created in MLx')")
 spark.sql("insert into pysparktab values (22,concat ( 'created in pyspark mlx', current_timestamp() ) )")
+spark.sql("select * from pysparktab").take(20)
 
     
 # DataFrames can be saved as Parquet files, maintaining the schema information.
