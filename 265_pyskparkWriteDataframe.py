@@ -42,7 +42,11 @@ spark = SparkSession\
 # this is where a create table landed
 #(Note: This is the same S3 location as defined under Data Access) 
 
-
+# this error is from Ranger permissions
+# AnalysisException: 'org.apache.hadoop.hive.ql.metadata.HiveException:
+# MetaException(message:Permission denied: 
+# user [marty] does not have [SELECT] privilege on [default]);'
+#
     
 !klist
 foo=spark.sql("show tables")
