@@ -46,6 +46,7 @@ spark = SparkSession\
 # AnalysisException: 'org.apache.hadoop.hive.ql.metadata.HiveException:
 # MetaException(message:Permission denied: 
 # user [marty] does not have [SELECT] privilege on [default]);'
+# syncfreeipa required after "marty" added as dwadmin
 #
     
 !klist
