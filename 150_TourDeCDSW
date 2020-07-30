@@ -1,4 +1,4 @@
-If you can read this you already created a project
+If you can read this inside CDSW/CML you already created a project
 Please take a quick look at 
  Kerberos credentials entry
  LDAP settings screen - you can only see this if you have admin rights... please don't change anything!
@@ -36,3 +36,4 @@ Very powerful model deployment - create a "python template" project and then
 follow the instructions here to deploy a model you can call from a REST endpoint
 https://www.cloudera.com/documentation/data-science-workbench/latest/topics/cdsw_models_examples.html
 
+Todo: add a flask app example
