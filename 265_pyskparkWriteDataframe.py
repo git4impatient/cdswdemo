@@ -2,6 +2,8 @@
 #
 # This is the simplest PySpark example.create a dataframe and write it
 #
+#!pip3 install pyspark
+#
 # for a new environment you'll need to
 # add the userid to the groups that have permission to access ML
 # update the id_broker mappings so you have write access to the S3 buckets
