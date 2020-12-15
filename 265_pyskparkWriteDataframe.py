@@ -34,7 +34,7 @@ spark = SparkSession\
     .config('job.local.dir', 'file:///home/cdsw/')\
     .appName("WriteDF2Parquet")\
     .config("spark.authenticate", "true") \
-    .config("spark.yarn.access.hadoopFileSystems","s3a://cdp-sandbox-default-se/datalake/warehouse")\
+    .config("spark.yarn.access.hadoopFileSystems","s3a://goes-se-cdp-sandbox/datalake/data/warehouse")\
     .getOrCreate()
     
 #    Create a file named spark-defaults.conf in the project or update the existing file with property:
