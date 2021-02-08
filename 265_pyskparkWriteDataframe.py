@@ -81,7 +81,6 @@ df = spark.createDataFrame([("10", ), ("11", ), ("13",  )], ["age"])
 df.show()
 
 #!hadoop fs -rm -r s3a://cdp-sandbox-default-se/datalake/martyparquet
-!hadoop fs -rm -r     s3a://goes-se-cdp-sandbox/datalake/data/warehouse
 df.write.parquet("s3a://goes-se-cdp-sandbox/datalake/data/warehouse/martyparquet")
 # this is where a create table landed hdfs://se-sandbox-dl-12apr-master0.se-sandb.a465-9q4k.cloudera.site:8020/tmp/age.parquet")
                  # file:/home/cdsw/age.parquet")
