@@ -13,5 +13,7 @@ while (args >= x):
     print ("Argument %i: %s" % (x, sys.argv[x]))
     sum = sum + int(sys.argv[x])
     x = x + 1
-    
+cdsw.track_metric("number of args", args ) 
+cdsw.track_metric("sum of args is", sum)
 print ("Sum of the numbers is: %i." % sum)
+
