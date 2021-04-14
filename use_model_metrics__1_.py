@@ -38,11 +38,11 @@ if dev:
     from predict_with_metrics import predict
 
 if dev:
-    model_deployment_crn="crn:cdp:ml:us-west-1:558bc1d2-8867-4357-8524-311d51259233:workspace:9c0efe74-d442-4e0b-a73b-e7694fe5d6e0/a23dff43-99ab-4ddd-babe-bf3dd299ea53"
+    model_deployment_crn="crn:cdp:ml:USE YOUR CRN"
     
     
     # update modelDeploymentCrn
-    model_access_key="mw41h51ped6a9k1cz0exoihmlflqjfgh"
+    model_access_key="muse your keyh"
 else: 
     # The model deployment CRN can be obtained from the model overview
     # page.
