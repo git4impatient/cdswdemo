@@ -1,0 +1,77 @@
+#
+#!pip3 install pyspark
+#
+# for a new environment you'll need to
+# add the userid to the groups that have permission to access ML
+# update the id_broker mappings so you have write access to the S3 buckets
+# XX do not do this - error when creating two roles for one user: update id_broker to allow ranger access
+# sync to freeipa to fix HTTP ERROR 403 forbidden
+# update Ranger policy so you can write to the default Hive database, commonly policy #14 
+# update Ranger policy so you can use URL commonly policy #13 
+# 
+
+from __future__ import print_function
+import sys
+from random import random
+from operator import add
+#from pyspark.sql import SparkSession
+
+!pip3 install python-decouple
+!pip3 install impyla
+from decouple import config
+
+userID = config('userID',default='')
+password = config('password',default='')
+
+#print (password)
+# impyla
+
+#!pip3 install impyla
+
+#jdbc:impala://ipaddressfromthegetjdbclinktothecdw:443/default;yadayada
+
+from impala.dbapi import connect
+conn = connect( \
+'ipaddressFromJDBCurlGoesHere', 443,  \
+auth_mechanism='LDAP',\
+user=userID,\
+password=password,\
+use_ssl=True,\
+use_http_transport=True,\
+http_path='cliservice/cdp-proxy-api/impala' )
+cursor = conn.cursor()
+
+#cursor.close()
+#conn.close()
+
+
+
+def mylookup(args):
+  #accountcode = int(args.get('accountcode'))
+  accountcode = args.get('accountcode')
+  print (accountcode)
+  qstring="select salary, 'query from CML' from sample_07 where code='" +accountcode+"'"
+  print (qstring)
+  cursor.execute(qstring)
+  res = cursor.fetchall()
+  print(res)
+  #result = spark.sql(qstring).take(1)
+  return res[0][0]
+
+# generate a bunch of queries
+while True:
+ mylookup ( {"accountcode":"11-3021"} )   
+
+# hide password
+
+#!pip3 install python-decouple
+# create file called .env with 
+# [settings]
+# userID=foo
+# password=bar
+#from decouple import config
+
+#userID = config('userID',default='none')
+#password = config('password',default='none')
+
+
