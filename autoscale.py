@@ -10,9 +10,9 @@ spark = SparkSession\
     .builder\
     .appName("forceautoscale")\
     .config("spark.authenticate", "true") \
-    .config ("spark.executor.instances", 12) \
+    .config ("spark.executor.instances", 10) \
     .config("spark.executor.memory ", "18g") \
     .config("spark.executor.cores", 4 ) \
-    .config("spark.scheduler.listenerbus.eventqueue.size  10000) \
+    .config("spark.scheduler.listenerbus.eventqueue.size",  10000) \
     .getOrCreate()
 sc = spark.sparkContext
